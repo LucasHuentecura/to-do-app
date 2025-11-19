@@ -1,0 +1,114 @@
+.todo-app {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #adadad;
+}
+
+/* Input y Botón de agregar */
+.add-todo {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.add-todo input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+.add-todo button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.add-todo button:disabled {
+    background-color: #919191;
+}
+
+/* Lista de tareas */
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    background-color: #3b3b3b;
+    transition: background-color 0.3s;
+}
+
+.todo-list li:hover {
+    background-color: #494949;
+}
+
+.todo-list input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.todo-text {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.completed .todo-text {
+    text-decoration: line-through;
+    color: #818181;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.pending-count strong{
+    color: #eeeeee;
+}
+
+.clear-btn{
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background-color: #d34141;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.localStorage-note {
+    text-align: center;
+    margin-top: 20px;
+    color: #7c7c7c;
+    font-size: 14px;
+}
