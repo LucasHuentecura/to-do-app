@@ -1,59 +1,38 @@
 # ToDoApp
+>[!NOTE]
+>Este proyecto fué generado utilizando [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+## Descripción del proyecto
+Es una aplicación de lista de tareas simple pero robusta.Con la finalidad de mostrar gestión de estado reactiva con Signals y la persistencia de datos con localStorage.
 
-## Development server
+![image alt](https://github.com/LucasHuentecura/to-do-app/blob/32757594940b9586dd57a44e188bfcea7c0aff57/Capturas/Captura%20ToDoApp%201.png)
+![image alt](https://github.com/LucasHuentecura/to-do-app/blob/32757594940b9586dd57a44e188bfcea7c0aff57/Capturas/Captura%20ToDoApp%202.png)
+![image alt](https://github.com/LucasHuentecura/to-do-app/blob/32757594940b9586dd57a44e188bfcea7c0aff57/Capturas/Captura%20ToDoApp%203.png)
 
-To start a local development server, run:
+### Características destacadas
+- ***Gestión de estado reactiva:*** Implementada utilizando el modelo de Signals de Angular.
+- ***Persistencia de datos:*** Las tareas se guardan automáticamente en el localStorage del navegador.
+- ***Separación de responsabilidades:*** Uso de un Service dedicado para manejar la lógica de datos (CRUD) y la interacción con localStorage.
+- ***Indicador de pendientes:*** Muestra el número de tareas incompletas en tiempo real (usando computed signals).
 
-```bash
-ng serve
-```
+## Tecnologías utilizadas
+- ***Angular:*** Framework principal.
+- ***Angular Signals:*** Para la gestión de estado reactiva en el TodoService.
+- ***TypeScript:*** Lenguaje de programación.
+- ***HTML/CSS:*** Estructura y estilos de la aplicación.
+- ***localStorage:*** Mecanísmo de almacenamiento persistente del navegador.
+- ***Angular CLI:*** Herramienta de linea de comandos para el desarrollo.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Estructura del proyecto
+src/app/ <br>
+├─ models/ <br>
+│   └── todo.model.ts  # (Definición de la interfaz Todo) <br>
+├─ services/ <br>
+│   └── todo.service.ts # (Manejo de la lógica de negocio y localStorage) <br>
+└─ app.component.ts    # (Componente principal) <br>
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Principios de diseño aplicados
+- ***Separación de intereses (SoC):*** El TodoService es el único responsable de la manipulación del array de tarreas y la interacción con localStorage.
+- ***Inmutabilidad:*** Todas las operaciones de actualización de tareas (addTodo, toggleCompleted, deleteTodo) utilizan el método signal.update(), que garantiza que el estado de la señal cambie de forma inmutable.
+- ***Rendimiento:*** Uso ed trackBy en las listas (*ngFor) para optimizar el rendimiento de la renderización del DOM.
+- ***Uso de effect():*** Implementación del effect() en el servicio para sincronizar el estado reactivo (todosSignal) con el almacenamiento (localStorage).
