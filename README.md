@@ -5,7 +5,7 @@
 ## Descripción del proyecto
 Es una aplicación de lista de tareas simple pero robusta.Con la finalidad de mostrar gestión de estado reactiva con Signals y la persistencia de datos con localStorage.
 
-![image alt](https://github.com/LucasHuentecura/to-do-app/blob/32757594940b9586dd57a44e188bfcea7c0aff57/Capturas/Captura%20ToDoApp%201.png)
+![image alt](https://github.com/LucasHuentecura/to-do-app/blob/9813b8b54578c7200df8fdc118fb761039b66cad/Capturas/Captura%20ToDoApp%201.png)
 ![image alt](https://github.com/LucasHuentecura/to-do-app/blob/32757594940b9586dd57a44e188bfcea7c0aff57/Capturas/Captura%20ToDoApp%202.png)
 ![image alt](https://github.com/LucasHuentecura/to-do-app/blob/32757594940b9586dd57a44e188bfcea7c0aff57/Capturas/Captura%20ToDoApp%203.png)
 
